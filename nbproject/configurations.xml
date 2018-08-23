@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="common" projectFiles="true">
+        <itemPath>common/common.h</itemPath>
+        <itemPath>common/smx.h</itemPath>
+        <itemPath>common/timloader.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="forms" projectFiles="true">
+        <itemPath>about.h</itemPath>
+        <itemPath>configform.h</itemPath>
+        <itemPath>mainform.h</itemPath>
+      </logicalFolder>
+      <itemPath>ColorPreview.h</itemPath>
+      <itemPath>ConfigClass.h</itemPath>
+      <itemPath>ContextClass.h</itemPath>
+      <itemPath>ModelClass.h</itemPath>
+      <itemPath>ShaderClass.h</itemPath>
+      <itemPath>TextureClass.h</itemPath>
+      <itemPath>global.h</itemPath>
+      <itemPath>glwidget.h</itemPath>
+      <itemPath>texturepreview.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="common" projectFiles="true">
+        <itemPath>common/common.cpp</itemPath>
+        <itemPath>common/smx.cpp</itemPath>
+        <itemPath>common/timloader.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="forms" projectFiles="true">
+        <itemPath>about.cxx</itemPath>
+        <itemPath>configform.cxx</itemPath>
+        <itemPath>mainform.cxx</itemPath>
+      </logicalFolder>
+      <itemPath>ColorPreview.cpp</itemPath>
+      <itemPath>ConfigClass.cpp</itemPath>
+      <itemPath>ContextClass.cpp</itemPath>
+      <itemPath>ModelClass.cpp</itemPath>
+      <itemPath>ShaderClass.cpp</itemPath>
+      <itemPath>TextureClass.cpp</itemPath>
+      <itemPath>glwidget.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>texturepreview.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <commandlineTool>g++</commandlineTool>
+          <incDir>
+            <pElem>C:/tinyxml2</pElem>
+            <pElem>C:/fltk-1.3.4-1</pElem>
+            <pElem>C:/glew-2.1.0/include</pElem>
+            <pElem>common</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DEBUG</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>C:/fltk-1.3.4-1/lib</pElem>
+            <pElem>C:/tinyxml2</pElem>
+            <pElem>C:/glew-2.1.0/lib/Release/Win32</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>fltk_images</linkerLibLibItem>
+            <linkerLibLibItem>fltk_gl</linkerLibLibItem>
+            <linkerLibLibItem>fltk</linkerLibLibItem>
+            <linkerLibLibItem>comctl32</linkerLibLibItem>
+            <linkerLibLibItem>comdlg32</linkerLibLibItem>
+            <linkerLibLibItem>uuid</linkerLibLibItem>
+            <linkerLibLibItem>gdi32</linkerLibLibItem>
+            <linkerLibLibItem>ole32</linkerLibLibItem>
+            <linkerLibLibItem>opengl32</linkerLibLibItem>
+            <linkerLibLibItem>glu32</linkerLibLibItem>
+            <linkerLibLibItem>tinyxml2</linkerLibLibItem>
+            <linkerLibLibItem>glew32</linkerLibLibItem>
+            <linkerLibLibItem>winspool</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="ColorPreview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ColorPreview.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ConfigClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ConfigClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ContextClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ContextClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ModelClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ModelClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ShaderClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ShaderClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TextureClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TextureClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="about.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="about.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/common.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/smx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/smx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/timloader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/timloader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="configform.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="configform.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="glwidget.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="glwidget.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mainform.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mainform.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="texturepreview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="texturepreview.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <stripSymbols>true</stripSymbols>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>C:/tinyxml2</pElem>
+            <pElem>C:/fltk-1.3.4-1</pElem>
+            <pElem>C:/glew-2.1.0/include</pElem>
+            <pElem>common</pElem>
+          </incDir>
+          <commandLine>-mwindows</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>C:/fltk-1.3.4-1/lib</pElem>
+            <pElem>C:/tinyxml2</pElem>
+            <pElem>C:/glew-2.1.0/lib/Release/Win32</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>fltk_images</linkerLibLibItem>
+            <linkerLibLibItem>fltk_gl</linkerLibLibItem>
+            <linkerLibLibItem>fltk</linkerLibLibItem>
+            <linkerLibLibItem>comctl32</linkerLibLibItem>
+            <linkerLibLibItem>comdlg32</linkerLibLibItem>
+            <linkerLibLibItem>uuid</linkerLibLibItem>
+            <linkerLibLibItem>gdi32</linkerLibLibItem>
+            <linkerLibLibItem>ole32</linkerLibLibItem>
+            <linkerLibLibItem>opengl32</linkerLibLibItem>
+            <linkerLibLibItem>glu32</linkerLibLibItem>
+            <linkerLibLibItem>tinyxml2</linkerLibLibItem>
+            <linkerLibLibItem>glew32</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="ColorPreview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ColorPreview.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ConfigClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ConfigClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ContextClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ContextClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ModelClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ModelClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ShaderClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ShaderClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TextureClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TextureClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="about.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="about.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/common.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/smx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/smx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/timloader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/timloader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="configform.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="configform.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="glwidget.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="glwidget.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mainform.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mainform.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="texturepreview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="texturepreview.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug-linux" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <commandlineTool>g++</commandlineTool>
+          <incDir>
+            <pElem>../common</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DEBUG</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>fltk_images</linkerLibLibItem>
+            <linkerLibLibItem>fltk_gl</linkerLibLibItem>
+            <linkerLibLibItem>fltk</linkerLibLibItem>
+            <linkerLibLibItem>tinyxml2</linkerLibLibItem>
+            <linkerLibLibItem>GL</linkerLibLibItem>
+            <linkerLibLibItem>GLU</linkerLibLibItem>
+            <linkerLibLibItem>GLEW</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="ColorPreview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ColorPreview.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ConfigClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ConfigClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ContextClass.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="ContextClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ModelClass.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="ModelClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ShaderClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ShaderClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TextureClass.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="TextureClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="about.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="about.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/common.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/smx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/smx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/timloader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/timloader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="configform.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="configform.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="glwidget.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="glwidget.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="mainform.cxx" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="mainform.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="texturepreview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="texturepreview.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release-linux" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <stripSymbols>true</stripSymbols>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>../common</pElem>
+          </incDir>
+          <commandLine>-march=corei7</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>fltk_images</linkerLibLibItem>
+            <linkerLibLibItem>fltk_gl</linkerLibLibItem>
+            <linkerLibLibItem>fltk</linkerLibLibItem>
+            <linkerLibLibItem>tinyxml2</linkerLibLibItem>
+            <linkerLibLibItem>GL</linkerLibLibItem>
+            <linkerLibLibItem>GLU</linkerLibLibItem>
+            <linkerLibLibItem>GLEW</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="ColorPreview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ColorPreview.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ConfigClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ConfigClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ContextClass.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="ContextClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ModelClass.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="ModelClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ShaderClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ShaderClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TextureClass.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="TextureClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="about.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="about.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/common.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/smx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/smx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/timloader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/timloader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="configform.cxx" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="configform.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="glwidget.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="glwidget.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="mainform.cxx" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="mainform.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="texturepreview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="texturepreview.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

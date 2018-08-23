@@ -1,0 +1,55 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cxx}
+widget_class ConfigUI {
+  label Configuration open
+  xywh {464 363 404 308} type Double
+  class Fl_Double_Window modal visible
+} {
+  Fl_Tabs configTabs {open
+    xywh {10 10 384 252}
+  } {
+    Fl_Group editorGroup {
+      label Editor selected
+      xywh {10 29 384 233} labelsize 12
+    } {
+      Fl_Group {} {
+        label OpenGL open
+        xywh {205 50 179 46} box ENGRAVED_BOX labelsize 12 align 5
+      } {
+        Fl_Check_Button singleBufferToggle {
+          label {Single-buffer mode}
+          tooltip {Forces OpenGL context to run in single buffer mode. Can fix Aero being disabled with newer NVIDIA cards on Windows 7. (restart required)} xywh {211 59 165 15} down_box DOWN_BOX labelsize 12
+        }
+        Fl_Check_Button shadersToggle {
+          label {GLSL Shaders}
+          tooltip {Enables use of GLSL shaders to accurately represent textured polygons if supported by your hardware. (restart required)} xywh {211 75 165 15} down_box DOWN_BOX labelsize 12
+        }
+      }
+      Fl_Group {} {
+        label Editor open
+        xywh {20 50 180 46} box ENGRAVED_BOX labelsize 12 align 5
+      } {
+        Fl_Check_Button systemColorsToggle {
+          label {Use System Colors}
+          tooltip {Use the system's color scheme.} xywh {28 59 164 15} down_box DOWN_BOX labelsize 12
+        }
+        Fl_Check_Button easterEggToggle {
+          label {NSFW Easter Egg :)}
+          tooltip {The question is... Can you find it? :)} xywh {28 75 164 15} down_box DOWN_BOX labelsize 12
+        }
+      }
+    }
+  }
+  Fl_Button {} {
+    label Cancel
+    callback {hide();}
+    xywh {316 270 78 25} labelsize 12
+  }
+  Fl_Button {} {
+    label Ok
+    callback configOkayButton_cb
+    xywh {232 270 78 25} labelsize 12
+  }
+}

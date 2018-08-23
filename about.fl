@@ -1,0 +1,49 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cxx}
+widget_class AboutUI {
+  label {About SMXTool} open selected
+  xywh {356 356 624 376} type Double
+  class Fl_Double_Window modal visible
+} {
+  Fl_Box {} {
+    label SMXTOOL
+    xywh {10 10 342 64} box THIN_UP_BOX labeltype ENGRAVED_LABEL labelfont 3 labelsize 38
+  }
+  Fl_Box {} {
+    label {Artwork by HikkHyric on DeviantArt}
+    image {icons/scarlet-logo.png} xywh {362 10 252 326} box THIN_DOWN_BOX color 55 labelfont 2 labelsize 12 align 578
+  }
+  Fl_Box {} {
+    label {Part of Project Scarlet, the soon to be released 3D game engine for the Sony PlayStation}
+    xywh {10 75 342 35} labelfont 9 align 128
+  }
+  Fl_Box {} {
+    label {2017-2018 Meido-Tek Productions}
+    xywh {10 306 342 29} box ENGRAVED_BOX labelsize 12
+  }
+  Fl_Group {} {open
+    xywh {10 146 342 154} box ENGRAVED_BOX
+  } {
+    Fl_Box {} {
+      label {Programmed by Lameguy64 of Meido-Tek Productions
+
+Built using FLTK and tinyxml2.}
+      xywh {15 153 332 100} labelsize 12 align 149
+    }
+    Fl_Box {} {
+      label {Project Scarlet is not officially licensed or endorsed by Sony Computer Entertainment.}
+      xywh {15 258 330 32} labelsize 12 align 149
+    }
+  }
+  Fl_Return_Button {} {
+    label Dismiss
+    callback {hide();}
+    xywh {10 344 90 20} labelsize 12
+  }
+  Fl_Output versionText {
+    label Version
+    xywh {56 119 44 21} box FLAT_BOX color 49 labelsize 12 textsize 12
+  }
+}

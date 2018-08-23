@@ -1,0 +1,414 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cxx}
+widget_class MainUI {
+  label {SMX Tool}
+  callback mainUI_cb open
+  xywh {408 172 824 548} type Double hide resizable
+  class Fl_Double_Window xclass {smxtool.smxtool}
+} {
+  Fl_Menu_Bar {} {open selected
+    xywh {0 0 824 20} labelsize 12 textsize 12
+  } {
+    Submenu {} {
+      label {&File} open
+      xywh {0 0 62 20} labelsize 12
+    } {
+      MenuItem {} {
+        label {&Open}
+        callback loadModelFile_cb
+        xywh {0 0 30 20} shortcut 0x4006f labelsize 12
+      }
+      MenuItem {} {
+        label {&Save}
+        callback saveModelFile_cb
+        xywh {0 0 30 20} shortcut 0x40073 labelsize 12
+      }
+      MenuItem {} {
+        label {Save &As}
+        callback saveModelFileAs_cb
+        xywh {0 0 30 20} labelsize 12 divider
+      }
+      MenuItem {} {
+        label {Merge...}
+        callback mergeModelFile_cb
+        xywh {0 0 30 20} labelsize 12 divider
+      }
+      MenuItem {} {
+        label {E&xit}
+        callback exitItem_cb
+        xywh {5 5 30 20} shortcut 0x8ffc1 labelsize 12
+      }
+    }
+    Submenu {} {
+      label {&Edit} open
+      xywh {5 5 62 20} labelsize 12
+    } {
+      MenuItem {} {
+        label {Bring to &Front}
+        callback selBringFront_cb
+        xywh {0 0 30 20} shortcut 0xff50 labelsize 12
+      }
+      MenuItem {} {
+        label {Send to &Back}
+        callback selSendBack_cb
+        xywh {0 0 30 20} shortcut 0xff57 labelsize 12 divider
+      }
+      MenuItem {} {
+        label {Select &All}
+        callback selectAllItem_cb
+        xywh {0 0 30 20} shortcut 0x40061 labelsize 12
+      }
+      MenuItem {} {
+        label {&Invert Selection}
+        callback invertSelectionItem_cb
+        xywh {0 0 30 20} shortcut 0x40069 labelsize 12 divider
+      }
+      MenuItem {} {
+        label {Editor &Settings...}
+        user_data 0 user_data_type long
+        callback settingsItem_cb
+        xywh {0 0 30 20} labelsize 12
+      }
+    }
+    Submenu {} {
+      label {&View} open
+      xywh {5 5 62 20} labelsize 12
+    } {
+      MenuItem viewDepthToggle {
+        label {&Depth Test}
+        callback {glviewport->redraw();}
+        tooltip {Toggles depth test useful  when working with transparent textures} xywh {0 0 30 20} type Toggle value 1 labelsize 12
+      }
+    }
+    MenuItem {} {
+      label {&About}
+      callback aboutItem_cb
+      xywh {5 5 30 20} labelsize 12
+    }
+  }
+  Fl_Group {} {open
+    xywh {0 20 824 35} box UP_FRAME
+  } {
+    Fl_Button {} {
+      callback loadModelButton_cb
+      tooltip {Open File} image {icons/file_open.png} xywh {5 25 25 25} box THIN_UP_BOX labelsize 12
+    }
+    Fl_Button {} {
+      callback saveModelButton_cb
+      tooltip {Save File} image {icons/file_save.png} xywh {30 25 25 25} box THIN_UP_BOX labelsize 12
+    }
+    Fl_Button {} {
+      callback loadBgModelFile_cb
+      tooltip {Set Background Geometry} image {icons/icon_bg.png} xywh {59 25 25 25} box THIN_UP_BOX labelsize 12
+    }
+    Fl_Button paintModeToggle {
+      callback paintModeToggle_cb
+      tooltip {Paint Mode} image {icons/tool_paint_hitmap.png} xywh {88 25 25 25} type Toggle box THIN_UP_BOX labelsize 12
+    }
+    Fl_Button {} {
+      user_data 0 user_data_type long
+      callback renderModeToggle_cb
+      tooltip {Wireframe Overlay} image {icons/view_wiremesh.png} xywh {117 25 25 25} type Toggle box THIN_UP_BOX labelsize 12
+    }
+    Fl_Button {} {
+      user_data 1 user_data_type long
+      callback renderModeToggle_cb
+      tooltip {Backface Culling} image {icons/view_backcull.png} xywh {142 25 25 25} type Toggle box THIN_UP_BOX value 1 labelsize 12
+    }
+    Fl_Button {} {
+      callback resetPosition_cb
+      tooltip {Reset to Center of Model} image {icons/auto_center.png} xywh {172 25 25 25} box THIN_UP_BOX labelsize 12
+    }
+    Fl_Button {} {
+      callback homePosition_cb
+      tooltip {Reset to Center} image {icons/home_center.png} xywh {197 25 25 25} box THIN_UP_BOX labelsize 12
+    }
+    Fl_Group {} {open
+      xywh {222 25 53 25}
+    } {
+      Fl_Button {} {
+        user_data 0 user_data_type long
+        callback perspModeChange_cb
+        tooltip {Orbit Perspective} image {icons/view_orbit.png} xywh {222 25 25 25} type Radio box THIN_UP_BOX value 1 labelsize 12
+      }
+      Fl_Button {} {
+        user_data 1 user_data_type long
+        callback perspModeChange_cb
+        tooltip {First-person Perspective} image {icons/view_firstperson.png} xywh {247 25 25 25} type Radio box THIN_UP_BOX labelsize 12
+      }
+    }
+    Fl_Group {} {open
+      xywh {275 25 513 25} resizable
+    } {}
+    Fl_Button {} {
+      callback aboutButton_cb
+      image {icons/scarlet2.png} xywh {792 25 25 25} box THIN_UP_BOX labelsize 12
+    }
+  }
+  Fl_Tile {} {open
+    xywh {-15 55 839 493} resizable
+  } {
+    Fl_Group {} {open
+      xywh {240 55 584 493} box DOWN_BOX
+    } {
+      Fl_Group glviewport {open
+        xywh {245 60 575 483} box FLAT_BOX color 4 resizable
+        code0 {\#include "glwidget.h"}
+        class glwidget
+      } {}
+    }
+    Fl_Tabs {} {open
+      xywh {0 55 240 493} labelsize 12
+    } {
+      Fl_Group {} {
+        label {Vertex Color && Attributes} open
+        xywh {0 75 240 473} box THIN_UP_BOX labelsize 12 resizable
+      } {
+        Fl_Group planeSettings {open
+          xywh {8 96 222 441} deactivate resizable
+        } {
+          Fl_Group {} {
+            label Color open
+            xywh {9 139 220 192} box ENGRAVED_FRAME labelsize 12 align 5 resizable
+          } {
+            Fl_Group {} {open
+              xywh {14 145 210 109} resizable
+            } {
+              Fl_Group colorPreviewer {open
+                xywh {44 145 150 109} box THIN_DOWN_BOX labelsize 12 resizable
+                code0 {\#include "ColorPreview.h"}
+                class ColorPreview
+              } {}
+              Fl_Group {} {open
+                xywh {15 145 25 109}
+              } {
+                Fl_Button {setColor[0]} {
+                  label V0
+                  user_data 0 user_data_type long
+                  callback setVcolor_cb
+                  xywh {15 145 25 20} type Radio labelsize 12
+                }
+                Fl_Button {setColor[2]} {
+                  label V2
+                  user_data 2 user_data_type long
+                  callback setVcolor_cb
+                  xywh {15 234 25 20} type Radio labelsize 12
+                }
+                Fl_Group {} {open
+                  xywh {15 170 25 59} resizable
+                } {}
+              }
+              Fl_Group {} {open
+                xywh {199 145 25 109}
+              } {
+                Fl_Button {setColor[1]} {
+                  label V1
+                  user_data 1 user_data_type long
+                  callback setVcolor_cb
+                  xywh {199 145 25 20} type Radio labelsize 12
+                }
+                Fl_Button {setColor[3]} {
+                  label V3
+                  user_data 3 user_data_type long
+                  callback setVcolor_cb
+                  xywh {199 234 25 20} type Radio labelsize 12
+                }
+                Fl_Group {} {open
+                  xywh {199 170 25 59} resizable
+                } {}
+              }
+            }
+            Fl_Group {} {open
+              xywh {14 259 210 64}
+            } {
+              Fl_Value_Slider {colorSlider[0]} {
+                label R
+                user_data 0 user_data_type long
+                callback colorSlider_cb
+                xywh {30 259 194 18} type {Horz Fill} labelsize 12 align 4 maximum 255 step 1 textsize 12 resizable
+              }
+              Fl_Value_Slider {colorSlider[1]} {
+                label G
+                user_data 1 user_data_type long
+                callback colorSlider_cb
+                xywh {30 282 194 18} type {Horz Fill} labelsize 12 align 4 maximum 255 step 1 textsize 12
+              }
+              Fl_Value_Slider {colorSlider[2]} {
+                label B
+                user_data 2 user_data_type long
+                callback colorSlider_cb
+                xywh {30 305 194 18} type {Horz Fill} labelsize 12 align 4 maximum 255 step 1 textsize 12
+              }
+            }
+          }
+          Fl_Group {} {
+            label Attributes open
+            xywh {9 350 220 187} box ENGRAVED_FRAME labelsize 12 align 5
+          } {
+            Fl_Group {} {
+              label {Blend Mode} open
+              xywh {19 439 200 87} box ENGRAVED_FRAME labelsize 12 align 69 resizable
+            } {
+              Fl_Round_Button {blendModeRadio[0]} {
+                label {No Blending}
+                user_data 0 user_data_type long
+                callback blendModeSet_cb
+                xywh {27 446 184 15} type Radio down_box ROUND_DOWN_BOX value 1 labelsize 12 align 84 resizable
+              }
+              Fl_Round_Button {blendModeRadio[1]} {
+                label {0: 50% + 50%}
+                user_data 1 user_data_type long
+                callback blendModeSet_cb
+                xywh {27 461 184 15} type Radio down_box ROUND_DOWN_BOX labelsize 12 align 84
+              }
+              Fl_Round_Button {blendModeRadio[2]} {
+                label {1: 100% + 100%}
+                user_data 2 user_data_type long
+                callback blendModeSet_cb
+                xywh {27 476 184 15} type Radio down_box ROUND_DOWN_BOX labelsize 12 align 84
+              }
+              Fl_Round_Button {blendModeRadio[3]} {
+                label {2: 100% + 50%}
+                user_data 3 user_data_type long
+                callback blendModeSet_cb
+                xywh {27 491 184 15} type Radio down_box ROUND_DOWN_BOX labelsize 12 align 84
+              }
+              Fl_Round_Button {blendModeRadio[4]} {
+                label {3: 100% - 100%}
+                user_data 4 user_data_type long
+                callback blendModeSet_cb
+                xywh {27 506 184 15} type Radio down_box ROUND_DOWN_BOX labelsize 12 align 84
+              }
+            }
+            Fl_Group {} {
+              label {Lighting Mode} open
+              xywh {19 393 201 27} box ENGRAVED_FRAME labelsize 12 align 5 deactivate
+            } {
+              Fl_Round_Button {lightModeRadio[0]} {
+                label None
+                xywh {24 400 53 15} type Radio down_box ROUND_DOWN_BOX value 1 labelsize 12
+              }
+              Fl_Round_Button {lightModeRadio[1]} {
+                label Flat
+                xywh {82 400 53 15} type Radio down_box ROUND_DOWN_BOX labelsize 12
+              }
+              Fl_Round_Button {lightModeRadio[2]} {
+                label Smooth
+                xywh {140 400 75 15} type Radio down_box ROUND_DOWN_BOX labelsize 12 resizable
+              }
+            }
+            Fl_Check_Button doubleSidedCheck {
+              label {Double sided (no culling)}
+              user_data 0 user_data_type long
+              callback planeSettingChange_cb
+              xywh {19 359 201 15} down_box DOWN_BOX labelsize 12 align 84
+            }
+          }
+          Fl_Group {} {open
+            xywh {8 96 221 24}
+          } {
+            Fl_Group {} {
+              label {Primitive Type} open
+              xywh {8 96 137 24} box ENGRAVED_FRAME labelsize 12 align 5
+            } {
+              Fl_Round_Button {primTypeRadio[0]} {
+                label Flat
+                user_data 0 user_data_type long
+                callback setPrimType_cb
+                xywh {13 100 60 15} type Radio down_box ROUND_DOWN_BOX value 1 labelsize 12 align 84
+              }
+              Fl_Round_Button {primTypeRadio[1]} {
+                label Gouraud
+                user_data 1 user_data_type long
+                callback setPrimType_cb
+                xywh {68 100 66 15} type Radio down_box ROUND_DOWN_BOX labelsize 12 align 84 resizable
+              }
+            }
+            Fl_Value_Output primitiveIndexOutput {
+              label Index
+              xywh {154 96 74 24} labelsize 12 align 5 textsize 12 resizable
+            }
+          }
+        }
+      }
+      Fl_Group {} {
+        label Texture open
+        xywh {0 75 240 473} labelsize 12 hide
+      } {
+        Fl_Group textureSettings {open
+          xywh {9 88 221 301} deactivate resizable
+        } {
+          Fl_Group {} {
+            label Mapping open
+            xywh {9 123 220 237} box ENGRAVED_BOX labelsize 12 align 5 resizable
+          } {
+            Fl_Group texturePreviewer {open
+              xywh {15 128 210 194} box THIN_DOWN_BOX resizable
+              code0 {\#include "texturepreview.h"}
+              class TexturePreview
+            } {}
+            Fl_Group {} {open
+              xywh {15 327 210 28}
+            } {
+              Fl_Spinner textureZoom {
+                label Zoom
+                callback textureZoom_cb
+                xywh {156 332 69 23} labelsize 12 when 1 maximum 8 textsize 12 resizable
+              }
+              Fl_Button {} {
+                user_data 0 user_data_type long
+                callback rotateTexButton_cb
+                tooltip {Rotate Coordinates Left} image {icons/icon_rotate_left.png} xywh {15 327 28 28} box THIN_UP_BOX labelsize 12 align 256
+              }
+              Fl_Button {} {
+                user_data 1 user_data_type long
+                callback rotateTexButton_cb
+                tooltip {Rotate Coordinates Right} image {icons/icon_rotate_right.png} xywh {43 327 28 28} box THIN_UP_BOX labelsize 12 align 256
+              }
+              Fl_Button {} {
+                callback expandTexButton_cb
+                tooltip {Set Coordinates to Texture Borders} image {icons/icon_expand.png} xywh {71 327 28 28} box THIN_UP_BOX labelsize 12
+              }
+            }
+          }
+          Fl_Check_Button primTexturedToggle {
+            label Textured
+            user_data 2 user_data_type long
+            callback setPrimTexture_cb
+            tooltip {Make Primitive Textured} xywh {9 88 220 15} down_box DOWN_BOX labelsize 12
+          }
+        }
+        Fl_Group {} {
+          label {Texture File} open
+          xywh {9 382 220 156} box ENGRAVED_FRAME labelsize 12 align 5
+        } {
+          Fl_Browser textureBrowser {
+            callback textureBrowser_cb
+            xywh {15 387 210 113} type Hold labelsize 12 when 3 textsize 12 resizable
+          }
+          Fl_Group {} {open
+            xywh {15 505 210 28}
+          } {
+            Fl_Button {} {
+              callback addTextureButton_cb
+              tooltip {Add Texture} image {icons/item_add.png} xywh {15 505 28 28} box THIN_UP_BOX labelsize 12
+            }
+            Fl_Button {} {
+              callback deleteTextureButton_cb
+              tooltip {Delete Texture} image {icons/item_delete.png} xywh {71 505 28 28} box THIN_UP_BOX labelsize 12
+            }
+            Fl_Button {} {
+              callback replaceTextureButton_cb
+              tooltip {Replace Texture} image {icons/replace_item.png} xywh {43 505 28 28} box THIN_UP_BOX labelsize 12
+            }
+            Fl_Group {} {open
+              xywh {102 505 123 28} resizable
+            } {}
+          }
+        }
+      }
+    }
+  }
+}
