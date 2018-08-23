@@ -4,7 +4,7 @@ PlayStation RSD and Scarlet SMX model viewer and material editor. Intended to be
 This tool is a bit early in development but should be useable for coloring and texturing RSD models. Suggestions for more features or quality of life improvements are welcome.
 
 ## Features
-* Uses GLSL shaders to emulate PSX style texture brightening.
+* Uses GLSL shaders to emulate PSX style texture brightening (make sure to enable it in settings).
 * Supports blended polygons with all blend modes correctly represented.
 * Gouraud shaded polygons with unique colors on each vertex.
 * Double-sided (no culling) flag can be set on primitives.
@@ -35,6 +35,7 @@ On Windows, it is recommended to compile using MinGW. MSVC compatibility is not 
 Compile with 'mingw32-make CONF=Release' or open the project using Netbeans and compile through that.
 
 ## To-do
-* Supporting STP mask bit on textures.
 * Line primitives.
+* Supporting STP mask bit on textures (not sure if possible with shaders).
 * Vertex paint tool.
+* Lighting..?

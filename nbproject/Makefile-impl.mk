@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=smxtool-forked
+PROJECTNAME=smxtool
 
 # Active Configuration
 DEFAULTCONF=Debug

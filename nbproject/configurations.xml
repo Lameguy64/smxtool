@@ -288,7 +288,7 @@
         <ccTool>
           <commandlineTool>g++</commandlineTool>
           <incDir>
-            <pElem>../common</pElem>
+            <pElem>/../common</pElem>
           </incDir>
           <preprocessorList>
             <Elem>DEBUG</Elem>
@@ -381,7 +381,7 @@
         <ccTool>
           <developmentMode>5</developmentMode>
           <incDir>
-            <pElem>../common</pElem>
+            <pElem>/../common</pElem>
           </incDir>
           <commandLine>-march=corei7</commandLine>
         </ccTool>

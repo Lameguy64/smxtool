@@ -70,11 +70,11 @@ LDLIBSOPTIONS=-L/C/fltk-1.3.4-1/lib -L/C/tinyxml2 -L/C/glew-2.1.0/lib/Release/Wi
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool-forked.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool-forked.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool-forked ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/ColorPreview.o: ColorPreview.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -157,7 +157,7 @@ ${OBJECTDIR}/texturepreview.o: texturepreview.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool-forked.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool.exe
 
 # Subprojects
 .clean-subprojects:
