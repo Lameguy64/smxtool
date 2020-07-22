@@ -35,21 +35,16 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/b4460d1a/common.o \
-	${OBJECTDIR}/_ext/4e2fa2fa/profileforms.o \
-	${OBJECTDIR}/_ext/b4460d1a/profiles.o \
-	${OBJECTDIR}/_ext/b4460d1a/smx.o \
-	${OBJECTDIR}/_ext/b4460d1a/timloader.o \
 	${OBJECTDIR}/ColorPreview.o \
-	${OBJECTDIR}/CommsClass.o \
 	${OBJECTDIR}/ConfigClass.o \
 	${OBJECTDIR}/ContextClass.o \
 	${OBJECTDIR}/ModelClass.o \
-	${OBJECTDIR}/SerialClass.o \
 	${OBJECTDIR}/ShaderClass.o \
 	${OBJECTDIR}/TextureClass.o \
 	${OBJECTDIR}/about.o \
-	${OBJECTDIR}/commsform.o \
+	${OBJECTDIR}/common/common.o \
+	${OBJECTDIR}/common/smx.o \
+	${OBJECTDIR}/common/timloader.o \
 	${OBJECTDIR}/configform.o \
 	${OBJECTDIR}/glwidget.o \
 	${OBJECTDIR}/main.o \
@@ -81,105 +76,80 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/_ext/b4460d1a/common.o: ../common/common.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/b4460d1a
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/b4460d1a/common.o ../common/common.cpp
-
-${OBJECTDIR}/_ext/4e2fa2fa/profileforms.o: ../common/forms/profileforms.cxx 
-	${MKDIR} -p ${OBJECTDIR}/_ext/4e2fa2fa
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/4e2fa2fa/profileforms.o ../common/forms/profileforms.cxx
-
-${OBJECTDIR}/_ext/b4460d1a/profiles.o: ../common/profiles.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/b4460d1a
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/b4460d1a/profiles.o ../common/profiles.cpp
-
-${OBJECTDIR}/_ext/b4460d1a/smx.o: ../common/smx.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/b4460d1a
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/b4460d1a/smx.o ../common/smx.cpp
-
-${OBJECTDIR}/_ext/b4460d1a/timloader.o: ../common/timloader.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/b4460d1a
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/b4460d1a/timloader.o ../common/timloader.cpp
-
-${OBJECTDIR}/ColorPreview.o: ColorPreview.cpp 
+${OBJECTDIR}/ColorPreview.o: ColorPreview.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColorPreview.o ColorPreview.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColorPreview.o ColorPreview.cpp
 
-${OBJECTDIR}/CommsClass.o: CommsClass.cpp 
+${OBJECTDIR}/ConfigClass.o: ConfigClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CommsClass.o CommsClass.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ConfigClass.o ConfigClass.cpp
 
-${OBJECTDIR}/ConfigClass.o: ConfigClass.cpp 
+${OBJECTDIR}/ContextClass.o: ContextClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ConfigClass.o ConfigClass.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ContextClass.o ContextClass.cpp
 
-${OBJECTDIR}/ContextClass.o: ContextClass.cpp 
+${OBJECTDIR}/ModelClass.o: ModelClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ContextClass.o ContextClass.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ModelClass.o ModelClass.cpp
 
-${OBJECTDIR}/ModelClass.o: ModelClass.cpp 
+${OBJECTDIR}/ShaderClass.o: ShaderClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ModelClass.o ModelClass.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ShaderClass.o ShaderClass.cpp
 
-${OBJECTDIR}/SerialClass.o: SerialClass.cpp 
+${OBJECTDIR}/TextureClass.o: TextureClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SerialClass.o SerialClass.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TextureClass.o TextureClass.cpp
 
-${OBJECTDIR}/ShaderClass.o: ShaderClass.cpp 
+${OBJECTDIR}/about.o: about.cxx
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ShaderClass.o ShaderClass.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/about.o about.cxx
 
-${OBJECTDIR}/TextureClass.o: TextureClass.cpp 
+${OBJECTDIR}/common/common.o: common/common.cpp
+	${MKDIR} -p ${OBJECTDIR}/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/common/common.o common/common.cpp
+
+${OBJECTDIR}/common/smx.o: common/smx.cpp
+	${MKDIR} -p ${OBJECTDIR}/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/common/smx.o common/smx.cpp
+
+${OBJECTDIR}/common/timloader.o: common/timloader.cpp
+	${MKDIR} -p ${OBJECTDIR}/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/common/timloader.o common/timloader.cpp
+
+${OBJECTDIR}/configform.o: configform.cxx
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TextureClass.o TextureClass.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/configform.o configform.cxx
 
-${OBJECTDIR}/about.o: about.cxx 
+${OBJECTDIR}/glwidget.o: glwidget.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/about.o about.cxx
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/glwidget.o glwidget.cpp
 
-${OBJECTDIR}/commsform.o: commsform.cxx 
+${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/commsform.o commsform.cxx
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/configform.o: configform.cxx 
+${OBJECTDIR}/mainform.o: mainform.cxx
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/configform.o configform.cxx
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mainform.o mainform.cxx
 
-${OBJECTDIR}/glwidget.o: glwidget.cpp 
+${OBJECTDIR}/texturepreview.o: texturepreview.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/glwidget.o glwidget.cpp
-
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
-
-${OBJECTDIR}/mainform.o: mainform.cxx 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mainform.o mainform.cxx
-
-${OBJECTDIR}/texturepreview.o: texturepreview.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/texturepreview.o texturepreview.cpp
+	$(COMPILE.cc) -O2 -I/../common -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/texturepreview.o texturepreview.cpp
 
 # Subprojects
 .build-subprojects:
@@ -187,7 +157,6 @@ ${OBJECTDIR}/texturepreview.o: texturepreview.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool
 
 # Subprojects
 .clean-subprojects:
