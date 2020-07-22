@@ -13,7 +13,7 @@
 
 #include <iostream>
 #include "TextureClass.h"
-#include "smx.h"
+#include "common/smx.h"
 
 TexImageClass::TexImageClass() {
 	gl_texture = 0;

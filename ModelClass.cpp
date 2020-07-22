@@ -24,7 +24,7 @@
 #include "global.h"
 #include "ModelClass.h"
 #include "mainform.h"
-#include "common.h"
+#include "common/common.h"
 
 const char* GetExtension(const char* str) {
 	

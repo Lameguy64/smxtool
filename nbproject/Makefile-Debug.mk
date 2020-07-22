@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=MinGW-Windows
-CND_DLIB_EXT=dll
+CND_PLATFORM=GNU-Linux
+CND_DLIB_EXT=so
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -70,83 +70,83 @@ LDLIBSOPTIONS=-L/C/fltk-1.3.4-1/lib -L/C/tinyxml2 -L/C/glew-2.1.0/lib/Release/Wi
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/ColorPreview.o: ColorPreview.cpp 
+${OBJECTDIR}/ColorPreview.o: ColorPreview.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColorPreview.o ColorPreview.cpp
 
-${OBJECTDIR}/ConfigClass.o: ConfigClass.cpp 
+${OBJECTDIR}/ConfigClass.o: ConfigClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ConfigClass.o ConfigClass.cpp
 
-${OBJECTDIR}/ContextClass.o: ContextClass.cpp 
+${OBJECTDIR}/ContextClass.o: ContextClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ContextClass.o ContextClass.cpp
 
-${OBJECTDIR}/ModelClass.o: ModelClass.cpp 
+${OBJECTDIR}/ModelClass.o: ModelClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ModelClass.o ModelClass.cpp
 
-${OBJECTDIR}/ShaderClass.o: ShaderClass.cpp 
+${OBJECTDIR}/ShaderClass.o: ShaderClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ShaderClass.o ShaderClass.cpp
 
-${OBJECTDIR}/TextureClass.o: TextureClass.cpp 
+${OBJECTDIR}/TextureClass.o: TextureClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TextureClass.o TextureClass.cpp
 
-${OBJECTDIR}/about.o: about.cxx 
+${OBJECTDIR}/about.o: about.cxx
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/about.o about.cxx
 
-${OBJECTDIR}/common/common.o: common/common.cpp 
+${OBJECTDIR}/common/common.o: common/common.cpp
 	${MKDIR} -p ${OBJECTDIR}/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/common/common.o common/common.cpp
 
-${OBJECTDIR}/common/smx.o: common/smx.cpp 
+${OBJECTDIR}/common/smx.o: common/smx.cpp
 	${MKDIR} -p ${OBJECTDIR}/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/common/smx.o common/smx.cpp
 
-${OBJECTDIR}/common/timloader.o: common/timloader.cpp 
+${OBJECTDIR}/common/timloader.o: common/timloader.cpp
 	${MKDIR} -p ${OBJECTDIR}/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/common/timloader.o common/timloader.cpp
 
-${OBJECTDIR}/configform.o: configform.cxx 
+${OBJECTDIR}/configform.o: configform.cxx
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/configform.o configform.cxx
 
-${OBJECTDIR}/glwidget.o: glwidget.cpp 
+${OBJECTDIR}/glwidget.o: glwidget.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/glwidget.o glwidget.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/mainform.o: mainform.cxx 
+${OBJECTDIR}/mainform.o: mainform.cxx
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mainform.o mainform.cxx
 
-${OBJECTDIR}/texturepreview.o: texturepreview.cpp 
+${OBJECTDIR}/texturepreview.o: texturepreview.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DDEBUG -I/C/tinyxml2 -I/C/fltk-1.3.4-1 -I/C/glew-2.1.0/include -Icommon -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/texturepreview.o texturepreview.cpp
@@ -157,7 +157,6 @@ ${OBJECTDIR}/texturepreview.o: texturepreview.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/smxtool.exe
 
 # Subprojects
 .clean-subprojects:
