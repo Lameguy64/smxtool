@@ -16,7 +16,7 @@
 
 #include <string>
 #include <Fl/gl.h>
-#include <timloader.h>
+#include "common/timloader.h"
 
 #define RED(c) (c&0xff)
 #define GREEN(c) ((c>>8)&0xff)

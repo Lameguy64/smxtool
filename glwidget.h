@@ -17,7 +17,7 @@
 #include <FL/Fl_Gl_Window.H>
 #include <FL/gl.h>
 #include <FL/glu.h>
-#include <smx.h>
+#include "common/smx.h"
 #include "ShaderClass.h"
 
 class glwidget : public Fl_Gl_Window {

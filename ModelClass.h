@@ -15,7 +15,7 @@
 #define MODELCLASS_H
 
 #include <vector>
-#include <smx.h>
+#include "common/smx.h"
 #include "TextureClass.h"
 
 class ModelClass : public SmxClass {

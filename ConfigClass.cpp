@@ -28,7 +28,7 @@
 #include "ConfigClass.h"
 #include "configform.h"
 #include "global.h"
-#include "common.h"
+#include "common/common.h"
 
 ConfigClass::ConfigClass() {
 	
