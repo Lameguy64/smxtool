@@ -14,7 +14,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install build-essential libtinyxml2-6 libtinyxml2-dev libfltk1.3-dev libglew-dev
+        sudo apt-get install build-essential libtinyxml2-6 libtinyxml2-dev libfltk1.3-dev libglew-dev xorg-dev
     - name: make
       run: make -f Makefile CONF=Debug-linux
     - name: Create archive
