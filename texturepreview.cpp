@@ -11,9 +11,9 @@
  * Created on April 17, 2018, 4:20 PM
  */
 
-#include <Fl/fl_draw.H>
-#include <Fl/Fl_Scrollbar.H>
-#include <Fl/Fl_Native_File_Chooser.H>
+#include <FL/fl_draw.H>
+#include <FL/Fl_Scrollbar.H>
+#include <FL/Fl_Native_File_Chooser.H>
 #include <iostream>
 #include "texturepreview.h"
 #include "TextureClass.h"

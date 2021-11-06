@@ -66,7 +66,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lfltk_images -lfltk_gl -lfltk -ltinyxml2 -lGL -lGLU -lGLEW
+LDLIBSOPTIONS=-lfltk_images -lfltk_gl -lfltk -ltinyxml2 -lGL -lGLU -lGLEW -ldl -lX11 -lXext -lXinerama -lXft -lXrender -lXdamage -lXfixes -lXcursor -lpthread -lfontconfig
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
