@@ -25,10 +25,29 @@ The following features of the RSD format are not supported:
 * You can double click a primitive to snap the axis point of the camera to the center of the primitive. Most useable in orbital camera view.
 
 ## Compiling
+
 You will need the following libraries:
+
 * tinyxml2
 * FLTK
 * GLEW
+* Xorg
+
+### Linux 
+
+You can install the needed libraries with :
+
+```bash
+sudo apt-get install build-essential libtinyxml2-6 libtinyxml2-dev libfltk1.3-dev libglew-dev xorg-dev
+```
+
+then compile with :
+
+```bash
+make -f Makefile CONF=Release-linux # or CONF=Debug-linux
+```
+
+The generated files will be in `smxtool/dist/Release-linux`.
 
 On Windows, it is recommended to compile using MinGW. MSVC compatibility is not guaranteed.
 
