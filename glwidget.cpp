@@ -14,8 +14,8 @@
 #include <math.h>
 #include <iostream>
 #include <GL/glew.h>
-#include <Fl/Fl.H>
-#include <Fl/fl_message.H>
+#include <FL/Fl.H>
+#include <FL/fl_message.H>
 
 #include "glwidget.h"
 #include "global.h"

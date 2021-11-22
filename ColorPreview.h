@@ -14,7 +14,7 @@
 #ifndef COLORPREVIEW_H
 #define COLORPREVIEW_H
 
-#include <Fl/Fl_Group.H>
+#include <FL/Fl_Group.H>
 
 class ColorPreview : public Fl_Group {
 public:

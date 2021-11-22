@@ -9,8 +9,8 @@
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
-#include <Fl/fl_ask.H>
-#include <Fl/Fl_Native_File_Chooser.H>
+#include <FL/fl_ask.H>
+#include <FL/Fl_Native_File_Chooser.H>
 #include "common/common.h"
 #include "global.h"
 #include "about.h"

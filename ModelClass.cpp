@@ -17,8 +17,8 @@
 #include <malloc.h>
 #include <string.h>
 #include <stdio.h>
-#include <Fl/fl_message.H>
-#include <Fl/Fl_Native_File_Chooser.H>
+#include <FL/fl_message.H>
+#include <FL/Fl_Native_File_Chooser.H>
 #include <GL/glew.h>
 
 #include "global.h"

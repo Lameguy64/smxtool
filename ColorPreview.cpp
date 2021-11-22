@@ -13,8 +13,8 @@
 
 #include <math.h>
 #include <iostream>
-#include <Fl/fl_draw.H>
-#include <Fl/Fl_Color_Chooser.H>
+#include <FL/fl_draw.H>
+#include <FL/Fl_Color_Chooser.H>
 #include "ColorPreview.h"
 #include "global.h"
 

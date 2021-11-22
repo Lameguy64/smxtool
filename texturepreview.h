@@ -14,8 +14,8 @@
 #ifndef TEXTUREPREVIEW_H
 #define TEXTUREPREVIEW_H
 
-#include <Fl/Fl_Group.H>
-#include <Fl/Fl_Scrollbar.H>
+#include <FL/Fl_Group.H>
+#include <FL/Fl_Scrollbar.H>
 
 typedef struct {
 	int x,y;

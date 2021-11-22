@@ -15,7 +15,7 @@
 #define TEXTURECLASS_H
 
 #include <string>
-#include <Fl/gl.h>
+#include <FL/gl.h>
 #include "common/timloader.h"
 
 #define RED(c) (c&0xff)

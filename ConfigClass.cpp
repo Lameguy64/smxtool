@@ -20,9 +20,9 @@
 #include <fcntl.h>
 #include <iostream>
 
-#include <Fl/Fl_Native_File_Chooser.H>
-#include <Fl/fl_message.H>
-#include <Fl/fl_ask.H>
+#include <FL/Fl_Native_File_Chooser.H>
+#include <FL/fl_message.H>
+#include <FL/fl_ask.H>
 #include <tinyxml2.h>
 
 #include "ConfigClass.h"
